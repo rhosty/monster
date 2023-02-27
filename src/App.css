@@ -1,5 +1,8 @@
 .App {
+  width: 100vw;
   text-align: center;
+  
+  
 }
 
 .App-logo {
@@ -35,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Monster{
+  font-size: 20px;
 }
