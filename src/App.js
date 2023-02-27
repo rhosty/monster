@@ -1,6 +1,6 @@
 import {Component} from 'react'
 
-
+import CardList from './comps/card-list/card-list.component';
 import './App.css';
 
 // let originalState = JSON.parse(JSON.stringify(this.state.monsters));
@@ -22,7 +22,6 @@ class App extends Component {
         return {searchField};
       })
   }
-  
 
 componentDidMount(){
   
@@ -44,10 +43,8 @@ componentDidMount(){
     return (
       <div className="App">
         <input className='input' type='search' placeholder='search monsters' onInput={this.onSearch} />
-       {filteredMonsters.map((monster) => {
-          return <h1 className='Monster'  key={monster.id}>{monster.name}</h1>
-        })
-       }
+     
+       <CardList monsters={filteredMonsters} />
       </div>
     );
   }  
